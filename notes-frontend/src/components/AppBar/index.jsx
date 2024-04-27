@@ -1,5 +1,7 @@
 import "./index.css";
 
+import { Link } from 'react-router-dom';
+
 export default function AppBar() {
     return (
         <div className="appbar">
@@ -7,7 +9,7 @@ export default function AppBar() {
                 <img src="logo.png" className="logo" />
                 <span className="subtitle">Meu Game Favorito</span>
             </div>
-            <img src="fav.png" className="fav"></img>
+            <Link to="/favoritos"><img src="fav.png" className="fav" alt="Favoritos"></img></Link>
         </div>
     );
 }

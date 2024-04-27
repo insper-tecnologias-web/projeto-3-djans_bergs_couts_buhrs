@@ -3,6 +3,8 @@ import "./App.css";
 import CorpoTelaUm from "./components/CorpoTelaUm";
 import axios from "axios";
 
+
+
 function App() {
 
   async function get_games(gameName) {

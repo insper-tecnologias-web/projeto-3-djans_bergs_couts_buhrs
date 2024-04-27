@@ -1,0 +1,59 @@
+.corpo_busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: lightcyan;
+}
+
+.titulo_busca {
+    font-family: 'Jura', sans-serif;
+    font-size: 30px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.botao_busca {
+    padding: 10px 20px;
+    background-color: #09769E;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Jura', sans-serif;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 230%;
+}
+
+.lista-jogos {
+    display: flex;
+    margin-top: 2435%;
+    flex-wrap: wrap; /* Os jogos vão quebrar de linha quando necessário */
+    justify-content: center; /* Os jogos vão ficar centralizados horizontalmente */
+    background-color: lightcyan;
+}
+
+.jogo {
+    margin: 10px;
+    text-align: center; /* Centraliza o texto (nome do jogo) */
+}
+
+.jogo h3 {
+    margin-bottom: 5px; /* Espaço entre o nome do jogo e a imagem */
+}
+
+.jogoimg {
+    width: 100px;
+    height: 100px;
+}
+.main_busca{
+    background-color: lightcyan;
+
+}
+
+
+
+

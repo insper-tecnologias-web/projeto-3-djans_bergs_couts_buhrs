@@ -1,4 +1,4 @@
-.appbar{
+.appbar_fav{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8,27 +8,29 @@
     padding:1%
 }
 
-.logo-container {
+.logo-container_fav {
     display: flex;
     align-items: center; 
 }
 
-.logo{
+.logo_fav{
     display: flex;
     width: 6.8%;
     padding: 4px;
     padding-right: 12px;
 }
 
-.subtitle{
+.subtitle_fav{
     display: flex;
     font-family: 'Jura', sans-serif;
     font-size: 18px;
     font-weight:bold;
 }
 
-.fav{
+.home{
     display: flex;
-    width: 20%;
-    justify-content: flex-end; 
+    width: 8%;
+    justify-content: flex-end;
+    margin-left: 73%; 
+    
 }
