@@ -1,7 +1,7 @@
 import "./index.css";
 import axios from "axios";
 import { useState } from "react";
-import AppBarFav from '../AppBarFav';
+import AppBarFavBusca from '../AppBarFAvBusca';
 
 export default function CorpoTelaUm(props) {
     // Estado para armazenar os jogos
@@ -14,7 +14,7 @@ export default function CorpoTelaUm(props) {
         try {
             let games = [];
             let i = 1;
-            while (i < 45) {
+            while (i <10) {
                 const url = `https://api.rawg.io/api/games?key=64e9b22860784b7083f6dcab592047df&page=${i}`;
                 const response = await axios.get(url);
                 const data = response.data;
@@ -48,10 +48,10 @@ export default function CorpoTelaUm(props) {
 
     return (
        <>
-         <AppBarFav />
+         <AppBarFavBusca />
          <main className="main_busca">
             <div className="corpo_busca">
-                <p className="titulo_busca">Navegue pelos seus jogos favoritos!</p>
+                <p className="titulo_busca">Clique e descubra novos jogos!</p>
                 <div>
                     <button className="botao_busca" onClick={getGames}>Mostrar jogos</button>
                 </div>

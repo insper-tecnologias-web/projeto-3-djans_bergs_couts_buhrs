@@ -30,7 +30,7 @@
 
 .lista-jogos {
     display: flex;
-    margin-top: 2435%;
+    margin-top: 120%;
     flex-wrap: wrap; /* Os jogos vão quebrar de linha quando necessário */
     justify-content: center; /* Os jogos vão ficar centralizados horizontalmente */
     background-color: lightcyan;

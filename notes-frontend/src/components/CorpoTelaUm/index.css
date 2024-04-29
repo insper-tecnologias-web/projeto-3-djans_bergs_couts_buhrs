@@ -12,14 +12,14 @@
 .titulo{
     font-family: 'Jura', sans-serif;
     font-size: 30px;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     font-weight: 600;
     margin-top: -10%;;
 }
 
 .input{
-    width: 100%;
-    padding: 1%;
+    width: 150%;
+    padding: 2%;
     font-size: 17px;
     font-family:'Jura', sans-serif;
     border-radius: 3px;
