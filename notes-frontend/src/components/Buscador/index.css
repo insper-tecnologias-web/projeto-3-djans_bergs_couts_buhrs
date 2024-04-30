@@ -30,7 +30,7 @@
 
 .lista-jogos {
     display: flex;
-    margin-top: 120%;
+    margin-top: 105%;
     flex-wrap: wrap; /* Os jogos vão quebrar de linha quando necessário */
     justify-content: center; /* Os jogos vão ficar centralizados horizontalmente */
     background-color: lightcyan;
@@ -39,6 +39,8 @@
 .jogo {
     margin: 10px;
     text-align: center; /* Centraliza o texto (nome do jogo) */
+    font-family: 'Jura', sans-serif;
+    font-size: 80%;
 }
 
 .jogo h3 {
