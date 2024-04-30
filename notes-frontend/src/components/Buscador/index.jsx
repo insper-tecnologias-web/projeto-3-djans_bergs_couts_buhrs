@@ -35,7 +35,7 @@ export default function CorpoTelaUm(props) {
         };
 
         try {
-            await axios.post("http://localhost:8000/api/games/", data);
+            await axios.post("https://projeto-2-backend-gaabridjan-1.onrender.com/api/games/", data);
             alert("Jogo adicionado aos favoritos!");
         } catch (error) {
             if (error.response.status === 409) {

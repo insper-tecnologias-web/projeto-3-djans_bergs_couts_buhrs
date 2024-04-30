@@ -9,7 +9,7 @@ const JogosFav = () => {
     // Pegando os jogos favoritos da base de dados
     const [games, setGames] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8000/api/games/")
+        axios.get("https://projeto-2-backend-gaabridjan-1.onrender.com/api/games/")
             .then((response) => setGames(response.data))
             .catch((error) => console.error('Error fetching games:', error));
     }, []);
@@ -17,7 +17,7 @@ const JogosFav = () => {
     // Criando uma função para deletar um jogo
     const deleteGame = async (id) => {
         try {
-            await axios.delete(`http://localhost:8000/api/games/${id}/`);
+            await axios.delete(`https://projeto-2-backend-gaabridjan-1.onrender.com/api/games/${id}/`);
             setGames(games.filter((game) => game.id !== id));
         } catch (error) {
             console.error('Error deleting game:', error);

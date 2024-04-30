@@ -23,7 +23,7 @@ export default function CorpoTelaUm(props) {
         
 
         axios
-            .post("http://localhost:8000/api/games/", data)
+            .post("https://projeto-2-backend-gaabridjan-1.onrender.com/api/games/", data)
             .then((response) => {
                 alert("Jogo encontrado e adicionado aos favoritos!");
                 setTitulo("");
