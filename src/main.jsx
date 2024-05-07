@@ -5,6 +5,8 @@ import App from './App.jsx';
 import JogosFav from './components/JogosFav/index.jsx';
 import Buscador from './components/Buscador/index.jsx';
 import './index.css';
+import CorpoTelaUm from './components/CorpoTelaUm/index.jsx';
+import Cadastro from './components/Cadastro/index.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
   {
     path: '/buscador',
     element: <Buscador />,
+  },
+  {
+    path: '/principal',
+    element: <CorpoTelaUm />,
+  },
+  {
+    path: '/cadastro',
+    element: <Cadastro />,
   },
 ]);
 
