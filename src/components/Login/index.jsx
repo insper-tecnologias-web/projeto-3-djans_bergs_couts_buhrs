@@ -45,29 +45,35 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
-      {error && <p className="error">{error}</p>} {/* Exibe a mensagem de erro */}
-      <div className="form-group">
-        <label htmlFor="username">Usuário</label>
-        <input
-          type="text"
-          id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="password">Senha</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <button onClick={handleLogin}>Entrar</button>
-      <p>Não tem uma conta? <Link to="/cadastro">Crie aqui</Link>.</p>
-    </div>
+            <h2 className='login-label'>Login</h2>
+            {error && <p className="error">{error}</p>} {/* Exibe a mensagem de erro */}
+            <div className="field">
+                <label htmlFor="username" className="label">Usuário</label>
+                <div className="control">
+                    <input
+                        className="input"
+                        type="text"
+                        id="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                </div>
+            </div>
+            <div className="field">
+                <label htmlFor="password" className="label">Senha</label>
+                <div className="control">
+                    <input
+                        className="input"
+                        type="password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+            </div>
+            <button className="button is-primary" onClick={handleLogin}>Entrar</button>
+            <p>Não tem uma conta? <Link to="/cadastro">Crie aqui</Link>.</p>
+        </div>
   );
 };
 
