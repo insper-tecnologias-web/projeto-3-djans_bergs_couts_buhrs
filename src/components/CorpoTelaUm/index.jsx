@@ -29,6 +29,12 @@ export default function CorpoTelaUm(props) {
       }
     const [titulo, setTitulo] = useState("");
 
+    const config = {
+        headers: {
+          Authorization: `token ${localStorage.getItem("token")}`,
+        },
+      };
+
     const addGame = async (event) => {
         event.preventDefault();
 
@@ -46,7 +52,7 @@ export default function CorpoTelaUm(props) {
         
 
         axios
-            .post("https://projeto-2-backend-gaabridjan-1.onrender.com/api/games/", data)
+            .post("http://127.0.0.1:8000/api/games/",data,config)
             .then((response) => {
                 alert("Jogo encontrado e adicionado aos favoritos!");
                 setTitulo("");

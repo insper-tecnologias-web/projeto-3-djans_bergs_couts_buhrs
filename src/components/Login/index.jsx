@@ -12,6 +12,14 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  async function get_token(username, password){
+    await axios.post('http://127.0.0.1:8000/api/token/',{username, password})
+    .then((response) => {
+      const token = response.data.token;
+      localStorage.setItem('token', token);
+  })
+}
  
 
 
@@ -22,9 +30,10 @@ const Login = () => {
     setError('');
 
     //Envio para o backend o usuario e senha para verificação
-    axios.post(' http://127.0.0.1:8000/api/users/', { username, password })
+     axios.post(' http://127.0.0.1:8000/api/users/', { username, password })
         .then(response => {
             // handle successful login
+            get_token(username, password);
             console.log('Login successful');
             setIsLoggedIn(true); // Define o estado de login como verdadeiro
         })
