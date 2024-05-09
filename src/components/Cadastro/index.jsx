@@ -35,13 +35,13 @@ const Signup = () => {
  
     <>
       <AppBar/>
-      
       <div className="signup-container">
-        <h2>Cadastro de Usuário</h2>
+        <h2 className='cadastro-label'>Cadastro de Usuário</h2>
         {error && <p className="error">{error}</p>} {/* Exibe a mensagem de erro */}
         <div className="form-group">
           <label htmlFor="username">Nome de Usuário</label>
           <input
+            className="input"
             type="text"
             id="username"
             value={username}
@@ -51,6 +51,7 @@ const Signup = () => {
         <div className="form-group">
           <label htmlFor="password">Senha</label>
           <input
+            className="input"
             type="password"
             id="password"
             value={password}
@@ -60,13 +61,14 @@ const Signup = () => {
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
+            className="input"
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <button onClick={handleSignup}>Cadastrar</button>
+        <button className="button is-primary" onClick={handleSignup}>Cadastrar</button>
       </div>
     </>
   );

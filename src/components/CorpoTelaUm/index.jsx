@@ -2,6 +2,7 @@ import "./index.css";
 import axios from "axios";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import AppBarPrincipal from '../AppBarPrincipal';
 
 export default function CorpoTelaUm(props) {
     async function get_games(gameName) {
@@ -62,18 +63,21 @@ export default function CorpoTelaUm(props) {
     };
 
     return (
-        <div className="corpo">
-            <p className="titulo">Navegue pelos seus jogos favoritos!</p>
-            
-            <form onSubmit={addGame} className="sub_corpo">
-                <input className="input" type="text" placeholder="Digite o nome do game aqui" onChange={(event) => setTitulo(event.target.value)} value={titulo} />
-                <button className="botao1" type="submit">Adicionar</button>
-            </form>
+        <>
+            <AppBarPrincipal/>
+            <div className="corpo">
+                <p className="titulo">Navegue pelos seus jogos favoritos!</p>
+                
+                <form onSubmit={addGame} className="sub_corpo">
+                    <input className="input" type="text" placeholder="Digite o nome do game aqui" onChange={(event) => setTitulo(event.target.value)} value={titulo} />
+                    <button className="botao1" type="submit">Adicionar</button>
+                </form>
 
+                
             
-           
-            <p className="texto1">Ou, descubra novos games com nosso buscador</p>
-            <Link to="/buscador"> <button className="botao2">Ir para o buscador</button></Link>
-        </div>
+                <p className="texto1">Ou, descubra novos games com nosso buscador</p>
+                <Link to="/buscador"> <button className="botao2">Ir para o buscador</button></Link>
+            </div>
+        </>
     );
 }
