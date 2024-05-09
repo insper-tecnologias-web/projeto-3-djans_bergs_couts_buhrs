@@ -22,7 +22,7 @@ const JogosFav = () => {
     // Criando uma função para deletar um jogo
     const deleteGame = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:8000/api/games/${id}/`);
+            await axios.delete(`http://127.0.0.1:8000/api/games/${id}/`,config);
             setGames(games.filter((game) => game.id !== id));
         } catch (error) {
             console.error('Error deleting game:', error);

@@ -7,6 +7,7 @@ import Buscador from './components/Buscador/index.jsx';
 import './index.css';
 import CorpoTelaUm from './components/CorpoTelaUm/index.jsx';
 import Cadastro from './components/Cadastro/index.jsx';
+import EditaUsuario from './components/EditaUsuario/index.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
     path: '/cadastro',
     element: <Cadastro />,
   },
+  {
+    path: '/edita',
+    element: <EditaUsuario />,
+  },
+  
 ]);
 
 // Somente use ReactDOM.createRoot() sem ReactDOM.render() para criar a raiz de renderização

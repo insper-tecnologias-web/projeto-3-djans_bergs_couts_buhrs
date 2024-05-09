@@ -1,0 +1,33 @@
+.edit-user-info {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .edit-user-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .edit-user-info label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .edit-user-info input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .edit-user-info button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-user-info button:hover {
+    background-color: #0056b3;
+  }
+  
