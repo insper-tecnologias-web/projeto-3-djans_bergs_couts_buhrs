@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 import axios from 'axios';
 import App from "../../../src/App.jsx";
+import AppBar from "../AppBar/index.jsx"
 import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
@@ -33,39 +34,49 @@ const Signup = () => {
     return navigate('/');
   }
   return (
-    <div className="signup-container">
-      <h2>Cadastro de Usuário</h2>
-      {error && <p className="error">{error}</p>} {/* Exibe a mensagem de erro */}
-      <div className="form-group">
-        <label htmlFor="username">Nome de Usuário</label>
-        <input
-          type="text"
-          id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+ 
+    <>
+      <AppBar/>
+      <div className="signup-container">
+        <h2 className='cadastro-label'>Cadastro de Usuário</h2>
+        {error && <p className="error">{error}</p>} {/* Exibe a mensagem de erro */}
+        <div className="form-group">
+          <label htmlFor="username">Nome de Usuário</label>
+          <input
+            className="input"
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Senha</label>
+          <input
+            className="input"
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            className="input"
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <button className="button is-primary" onClick={handleSignup}>Cadastrar</button>
       </div>
-      <div className="form-group">
-        <label htmlFor="password">Senha</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <button onClick={handleSignup}>Cadastrar</button>
-    </div>
+    </>
   );
+    
+    
+    
 };
 
 export default Signup;
