@@ -71,7 +71,7 @@ const Login = () => {
                     />
                 </div>
             </div>
-            <button className="button is-primary" onClick={handleLogin}>Entrar</button>
+            <button className="button is-primary " onClick={handleLogin}>Entrar</button>
             <p>Não tem uma conta? <Link to="/cadastro">Crie aqui</Link>.</p>
         </div>
   );
