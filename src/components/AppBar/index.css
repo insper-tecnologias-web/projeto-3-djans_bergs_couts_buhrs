@@ -1,3 +1,22 @@
+.container-edit{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.brand-edit{
+    margin-left: -120%;
+}
+
+.title{
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 .subtitle {
     font-family: 'Jura', sans-serif;
     font-size: 18px;

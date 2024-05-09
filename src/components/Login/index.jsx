@@ -43,35 +43,21 @@ const Login = () => {
 
   return (
     <div className="login-container">
+        <div class="mb-3">
             <h2 className='login-label'>Login</h2>
+            <label for="username" class="form-label">Usuário</label>
+            <input type="email" class="form-control" id="username" value={username}
+                        onChange={(e) => setUsername(e.target.value)}/>
             {error && <p className="error">{error}</p>} {/* Exibe a mensagem de erro */}
-            <div className="field">
-                <label htmlFor="username" className="label">Usuário</label>
-                <div className="control">
-                    <input
-                        className="input"
-                        type="text"
-                        id="username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                </div>
-            </div>
-            <div className="field">
-                <label htmlFor="password" className="label">Senha</label>
-                <div className="control">
-                    <input
-                        className="input"
-                        type="password"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-            </div>
-            <button className="button is-primary " onClick={handleLogin}>Entrar</button>
-            <p>Não tem uma conta? <Link to="/cadastro">Crie aqui</Link>.</p>
         </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password" value={password}
+                        onChange={(e) => setPassword(e.target.value)}></input>
+        </div>
+            <button className="btn-edit btn btn-outline-dark " onClick={handleLogin}>Entrar</button>
+            <p>Não tem uma conta? <Link to="/cadastro">Crie aqui</Link>.</p>
+    </div>
   );
 };
 

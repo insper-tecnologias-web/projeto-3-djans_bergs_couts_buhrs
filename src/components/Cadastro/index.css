@@ -33,6 +33,12 @@
     border: 1px solid #ccc;
     border-radius: 3px;
   }
+
+  .cadastro-label{
+    margin-bottom: 7%;
+    font-weight: bold;
+    font-size: larger;
+  }
   
   button {
     width: 100%;
