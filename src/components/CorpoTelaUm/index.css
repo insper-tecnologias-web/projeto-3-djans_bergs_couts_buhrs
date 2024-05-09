@@ -1,5 +1,6 @@
 
 .corpo{
+    font-family: 'Jura', sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -7,6 +8,7 @@
     width: 100%;
     height: 100vh;
     background-color: lightcyan;
+    margin-top: -5%;
 }
 
 .titulo{
@@ -28,17 +30,6 @@
     border:2px solid #ccc
 }
 
-.botao1{
-    padding: 10px 20px;
-    background-color: #09769E; /* Vivid blue background */
-    border: none;
-    border-radius: 3px; /* Slightly rounded corners */
-    color: white;
-    font-size: 25px;
-    font-family: 'Jura', sans-serif;
-    cursor: pointer;
-    outline: none;
-}
 
 .texto1{
     font-family: 'Jura', sans-serif;
@@ -48,21 +39,34 @@
     margin-bottom: 5%;
 }
 
-.botao2{
-    padding: 10px 20px;
-    background-color: #09769E; /* Vivid blue background */
-    border: none;
-    border-radius: 3px; /* Slightly rounded corners */
-    color: white;
-    font-size: 25px;
+.texto2{
     font-family: 'Jura', sans-serif;
-    cursor: pointer;
-    outline: none;
+    font-size: 30px;
+    margin-top: 5%;
+    font-weight: 600;
+    margin-bottom: 2.5%;
 }
-.sub_corpo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction: column;
-   
-}
+
+
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  #lupa{
+    margin-top: -30%;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .error {
+    color: red;
+  }
+
+  

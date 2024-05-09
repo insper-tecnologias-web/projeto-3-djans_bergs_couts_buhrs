@@ -4,13 +4,19 @@ import { Link } from 'react-router-dom';
 
 export default function AppBar() {
     return (
-        <div className="appbar_fav">
-            <div className="logo-container_fav">
-                <img src="logo.png" className="logo_fav" />
-                <span className="subtitle_fav">Meu Game Favorito</span>
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+            <div className="navbar-brand">
+                <div to="/" className="navbar-item">
+                    <img src="logo.png" alt="Logo" id="logo"/>
+                    <span className="subtitle">Meu Game Favorito</span>
+                    
+                </div>
+                <div className="icones">
+                    <Link to="/favoritos"><img src="fav.png" className="icon" alt="Favoritos" id="fav"></img></Link>
+                    <Link to="/principal"><img src="inicio.png" className="icon" alt="Favoritos" id="home"></img></Link>
+                </div>
             </div>
-            <Link to="/"><img src="inicio.png" className="home_buscador" alt="Favoritos"></img></Link>
-            <Link to="/favoritos"><img src="fav.png" className="fav" alt="Favoritos"></img></Link>
-        </div>
+            
+        </nav>
     );
 }

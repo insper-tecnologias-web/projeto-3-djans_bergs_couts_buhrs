@@ -14,9 +14,25 @@
 
 .logo_fav{
     display: flex;
-    width: 6.8%;
     padding: 4px;
     padding-right: 12px;
+    width: 28px;
+    height: 28px;
+}
+
+.icon{
+    width: 28px;
+    height: 28px;
+}
+
+#fav{
+    margin-right: 15px;
+}
+
+.icones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .subtitle_fav{
