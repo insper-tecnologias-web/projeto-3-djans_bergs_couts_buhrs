@@ -6,10 +6,15 @@ import axios from 'axios';
 
 
 const JogosFav = () => {
+    const config = {
+        headers: {
+          Authorization: `token ${localStorage.getItem("token")}`,
+        },
+      };
     // Pegando os jogos favoritos da base de dados
     const [games, setGames] = useState([]);
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/api/games/")
+        axios.get("http://127.0.0.1:8000/api/games/",config)
             .then((response) => setGames(response.data))
             .catch((error) => console.error('Error fetching games:', error));
     }, []);

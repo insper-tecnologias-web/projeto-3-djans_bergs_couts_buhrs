@@ -9,6 +9,12 @@ export default function CorpoTelaUm(props) {
     // Estado para controlar a visibilidade da lista de jogos
     const [mostrarLista, setMostrarLista] = useState(false);
 
+    const config = {
+        headers: {
+          Authorization: `token ${localStorage.getItem("token")}`,
+        },
+      };
+
     // Função para pegar os jogos da API e atualizar o estado
     async function getGames() {
         try {
@@ -35,7 +41,7 @@ export default function CorpoTelaUm(props) {
         };
 
         try {
-            await axios.post("https://projeto-2-backend-gaabridjan-1.onrender.com/api/games/", data);
+            await axios.post("http://127.0.0.1:8000/api/games/",data, config);
             alert("Jogo adicionado aos favoritos!");
         } catch (error) {
             if (error.response.status === 409) {
