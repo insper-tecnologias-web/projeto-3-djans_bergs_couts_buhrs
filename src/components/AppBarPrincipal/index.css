@@ -13,20 +13,21 @@
 .navbar-brand {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
     width: 100%;
 }
 
-.navbar-item {
-    display: flex;
-    align-items: center;
+
+
+.brand-edit{
+    margin-left: -20%;
 }
 
-#fav-link img {
-    width: 28px;
-    height: 28px;
-    margin-left: 1rem;
+.fav-edit{
+    margin-left: 875%;
 }
+
+
 
 
 
