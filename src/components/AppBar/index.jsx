@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 
 export default function AppBar() {
     return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div className="navbar-brand">
-                <div to="/" className="navbar-item">
-                    <img src="logo.png" alt="Logo" id="logo"/>
-                    <span className="subtitle">Meu Game Favorito</span>
+        <div className="navbar navbar-expand-lg bd-navbar sticky-top">
+            <nav className="container-xxl bd-gutter flex-wrap flex-lg-nowrap ">
+                <div className="bd-navbar-toggle">
+                    <div className="brand-edit navbar-brand">
+                        <img src="logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"/>
+                        <h1 className="title">Meu Game Favorito</h1>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     );
 }
 

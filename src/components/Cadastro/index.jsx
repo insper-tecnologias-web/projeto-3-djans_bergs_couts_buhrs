@@ -38,40 +38,26 @@ const Signup = () => {
     <>
       <AppBar/>
       <div className="signup-container">
-        <h2 className='cadastro-label'>Cadastro de Usuário</h2>
-        {error && <p className="error">{error}</p>} {/* Exibe a mensagem de erro */}
-        <div className="form-group">
-          <label htmlFor="username">Nome de Usuário</label>
-          <input
-            className="input"
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+        <div class="mb-3">
+          <h2 className='cadastro-label'>Cadastro de Usuário</h2>
+            <label for="username" class="form-label">Nome de Usuário</label>
+            <input type="username" class="form-control" id="username" value={username}
+                        onChange={(e) => setUsername(e.target.value)}/>
+            {error && <p className="error">{error}</p>} {/* Exibe a mensagem de erro */}
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Senha</label>
-          <input
-            className="input"
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+        <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" value={email}
+                        onChange={(e) => setEmail(e.target.value)}></input>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            className="input"
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+        <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password" value={password}
+                        onChange={(e) => setPassword(e.target.value)}></input>
         </div>
-        <button className="button is-primary" onClick={handleSignup}>Cadastrar</button>
+            <button className="btn-edit btn btn-outline-dark " onClick={handleSignup}>Cadastrar</button>
       </div>
+      
     </>
   );
     

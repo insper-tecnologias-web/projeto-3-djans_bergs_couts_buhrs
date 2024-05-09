@@ -9,6 +9,10 @@
   font-family: 'Jura', sans-serif; /* Adicionando a mesma fonte utilizada no navbar */
 }
 
+.btn-edit{
+  margin-top: 5%;
+}
+
 .form-group {
   margin-bottom: 15px;
   text-align: left;
