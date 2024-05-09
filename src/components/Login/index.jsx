@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './index.css';
 import axios from 'axios';
 import CorpoTelaUm from '../CorpoTelaUm/index.jsx';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -10,6 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
  
 
 
@@ -33,14 +35,10 @@ const Login = () => {
         });
   };
 
-  const handleSignup = () => {
-    // Aqui você pode redirecionar para a página de cadastro
-    console.log('Redirecionar para a página de cadastro');
-  };
-
+ 
   // Redireciona para a próxima página se o login for bem-sucedido
   if (isLoggedIn) {
-    return <CorpoTelaUm />;
+    return navigate('/principal');
   }
 
   return (

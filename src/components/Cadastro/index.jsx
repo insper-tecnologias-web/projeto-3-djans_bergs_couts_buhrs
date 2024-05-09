@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 import axios from 'axios';
 import App from "../../../src/App.jsx";
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -9,6 +10,7 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [isCadstar, setIsCadastrar] = useState(false);
+  const navigate = useNavigate();
 
   const handleSignup = () => {
     // Limpa o estado de erro
@@ -28,7 +30,7 @@ const Signup = () => {
       });
   };
   if (isCadstar) {
-    return <App />;
+    return navigate('/');
   }
   return (
     <div className="signup-container">
