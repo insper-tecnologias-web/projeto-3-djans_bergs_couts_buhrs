@@ -46,7 +46,7 @@ const JogosFav = () => {
                             ))}
                         </ul>
                     ) : (
-                        <p>No games found.</p>
+                        <p>Ainda não há jogos favoritos</p>
                     )}
                 </div>
             </main>
