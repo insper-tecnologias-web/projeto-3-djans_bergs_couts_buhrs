@@ -19,7 +19,7 @@
     margin-bottom: 10px;
   }
   
-  .edit-user-info button {
+  .button_save_user {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -29,5 +29,13 @@
   
   .edit-user-info button:hover {
     background-color: #0056b3;
+  }
+  .button_delete_user{
+    padding: 10px 20px;
+    background-color: #ff0000;
+    margin-top: 1rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
   }
   
