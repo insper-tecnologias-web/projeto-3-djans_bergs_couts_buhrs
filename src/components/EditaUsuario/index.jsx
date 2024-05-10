@@ -71,9 +71,9 @@ const EditUserInfo = () => {
     <>
     <AppBarFavBusca/>
     <div className="edit-user-info">
-      <h2>Edit User Information</h2>
+      <h2>Informações do Usuário</h2>
       <div>
-        <label>Name:</label>
+        <label>Nome:</label>
         <input
           type="text"
           value={name}
@@ -89,15 +89,15 @@ const EditUserInfo = () => {
         />
       </div>
       <div>
-        <label>Password:</label>
+        <label>Senha:</label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <button className='button_save_user' onClick={handleSave}>Save</button>
-      <button className='button_delete_user' onClick={handleDelete}>Delete</button>
+      <button className='button_save_user' onClick={handleSave}>Salvar</button>
+      <button className='button_delete_user' onClick={handleDelete}>Deletar</button>
     </div>
     </>
     
