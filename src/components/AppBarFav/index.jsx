@@ -12,6 +12,7 @@ export default function AppBar() {
                     
                 </div>
                 <Link to="/favoritos"><img src="fav.png" className="fav" alt="Favoritos" id="fav"></img></Link>
+                <Link to="/edita"><img src="usuario.png" className="edita_usuario" alt="usuario" id="usuario"></img></Link>
             </div>
             
         </nav>
