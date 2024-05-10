@@ -19,7 +19,7 @@ export default function CorpoTelaUm(props) {
     async function getGames() {
         try {
             let games = [];
-            let i = Math.floor(Math.random() * 25000);
+            let i = Math.floor(Math.random() * 11);
             let j = i
             while (i <j + 10) {
                 const url = `https://api.rawg.io/api/games?key=64e9b22860784b7083f6dcab592047df&page=${i}`;
