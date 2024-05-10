@@ -19,8 +19,9 @@ export default function CorpoTelaUm(props) {
     async function getGames() {
         try {
             let games = [];
-            let i = 1;
-            while (i <10) {
+            let i = Math.floor(Math.random() * 25000);
+            let j = i
+            while (i <j + 10) {
                 const url = `https://api.rawg.io/api/games?key=64e9b22860784b7083f6dcab592047df&page=${i}`;
                 const response = await axios.get(url);
                 const data = response.data;
@@ -51,34 +52,44 @@ export default function CorpoTelaUm(props) {
             console.error('Houve um erro!', error);
         }
     }
+    if (mostrarLista){
+        return(
+            <>
+            <AppBarFavBusca />
+            <div className="lista-jogos">
+                    {jogos.map(jogo => (
+                        <div key={jogo.id} className="jogo">
+                            <h3>{jogo.name}</h3>
+                            <img 
+                                src={jogo.background_image} 
+                                alt={jogo.name} 
+                                className="jogoimg" 
+                                onClick={() => salvarJogo(jogo)} // Chama a função salvarJogo ao clicar na imagem
+                                style={{ cursor: 'pointer' }} // Define o cursor como ponteiro para indicar que é clicável
+                            />
+                        </div>
+                    ))}
+                </div>
+            </>
+
+            
+        )
+
+    }
 
     return (
        <>
          <AppBarFavBusca />
-         <main className="main_busca">
-            <div className="corpo_busca">
+        <div className="corpo_busca">
+            <div className="titulo-btn">
                 <p className="titulo_busca">Clique e descubra novos jogos!</p>
-                <div>
-                    <button className="botao_busca" onClick={getGames}>Mostrar jogos</button>
-                </div>
-                {mostrarLista && ( // Renderiza a lista de jogos apenas se mostrarLista for verdadeiro
-                    <div className="lista-jogos">
-                        {jogos.map(jogo => (
-                            <div key={jogo.id} className="jogo">
-                                <h3>{jogo.name}</h3>
-                                <img 
-                                    src={jogo.background_image} 
-                                    alt={jogo.name} 
-                                    className="jogoimg" 
-                                    onClick={() => salvarJogo(jogo)} // Chama a função salvarJogo ao clicar na imagem
-                                    style={{ cursor: 'pointer' }} // Define o cursor como ponteiro para indicar que é clicável
-                                />
-                            </div>
-                        ))}
-                    </div>
-                )}
+                <button className="btn-edit-2 btn btn-outline-dark " onClick={getGames}>Mostrar jogos</button>
             </div>
-         </main>
+        </div>
+            
+            
+        
+
        </>
     );
 }

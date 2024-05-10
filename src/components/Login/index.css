@@ -1,7 +1,8 @@
+/* Estilos base */
 .login-container {
-  max-width: 300px;
-  margin: 100px auto;
-  padding: 20px;
+  max-width: 25%;
+  margin: 10% auto;
+  padding: 2%;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -13,45 +14,25 @@
   margin-top: 5%;
 }
 
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  font-family: 'Jura', sans-serif;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
 p {
-  margin-top: 20px;
+  margin-top: 5%;
 }
 
 .login-label{
   margin-bottom: 7%;
   font-weight: bold;
   font-size: larger;
+}
+
+/* Mídia queries para ajustar o layout em tamanhos de tela menores */
+@media screen and (max-width: 768px) {
+  .login-container {
+    max-width: 50%; /* Reduzir a largura máxima do contêiner para 50% da largura da tela */
+    margin: 20% auto; /* Ajustar a margem superior e inferior para 20% da tela */
+    padding: 5%; /* Reduzindo a margem superior para 50px */
+  }
+  
+  .btn-edit {
+    margin-top: 3%; /* Reduzindo a margem superior do botão */
+  }
 }
