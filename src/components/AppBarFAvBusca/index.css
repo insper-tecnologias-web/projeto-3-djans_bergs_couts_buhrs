@@ -1,51 +1,52 @@
-.appbar_fav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color:#09769E ;
-    justify-content: space-between;
-    padding:1%
-}
-
-.logo-container_fav {
-    display: flex;
-    align-items: center; 
-}
-
-.logo_fav{
-    display: flex;
-    padding: 4px;
-    padding-right: 12px;
-    width: 28px;
-    height: 28px;
-}
-
-.icon{
-    width: 28px;
-    height: 28px;
-}
-
-#fav{
-    margin-right: 15px;
-}
-
-.icones{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.subtitle_fav{
-    display: flex;
+/* Estilos base */
+.subtitle {
     font-family: 'Jura', sans-serif;
-    font-size: 18px;
-    font-weight:bold;
+    font-size: 80%;
+    font-weight: bold;
 }
 
-.home_buscador{
+.navbar-brand {
     display: flex;
-    width: 7.5%;
-    justify-content: flex-end;
-    margin-left: 100%; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 6%;
+    height: 6%;
+    margin-right: 1rem;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.fav,
+.edita_usuario,
+.inicio{
+    width: 30px;
+    height: 30px;
     
+}
+
+.fav,
+.inicio{
+    margin-right: 10%;
+}
+
+.icones {
+    
+    margin-right: 1rem;
+}
+
+/* Ajusta os ícones para telas menores */
+@media screen and (max-width: 768px) {
+    .fav,
+    .edita_usuario {
+        width: 20px;
+        height: 20px;
+    }
 }
