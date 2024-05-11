@@ -70,34 +70,25 @@ const EditUserInfo = () => {
   
     <>
     <AppBarFavBusca/>
-    <div className="edit-user-info">
-      <h2>Informações do Usuário</h2>
-      <div>
-        <label>Nome:</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+    <div className="change-container">
+    <div class="mb-3">
+          <h2 className='info-label'>Informações do Usuário</h2>
+            <label for="username" class="form-label">Nome de Usuário</label>
+            <input type="username" class="form-control" id="username" value={name}
+                        onChange={(e) => setUsername(e.target.value)}/>
       </div>
-      <div>
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Senha:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <button className='button_save_user' onClick={handleSave}>Salvar</button>
-      <button className='button_delete_user' onClick={handleDelete}>Deletar</button>
+      <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" value={email}
+                        onChange={(e) => setEmail(e.target.value)}></input>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password" value={password}
+                        onChange={(e) => setPassword(e.target.value)}></input>
+        </div>
+      <button className='btn-salvar btn btn-outline-success' onClick={handleSave}>Salvar</button>
+      <button className='btn-deletar btn btn-outline-danger' onClick={handleDelete}>Deletar</button>
     </div>
     </>
     

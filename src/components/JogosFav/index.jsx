@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./index.css";
-import AppBarFav from '../AppBarFav';
+import AppBarFavBusca from '../AppBarFAvBusca';
 import axios from 'axios';
 
 
@@ -31,25 +31,23 @@ const JogosFav = () => {
     
     return (
         <>
-            <AppBarFav />
-            <main className='total'>
-                <div>
-                    <h1>Jogos Favoritos</h1>
+            <AppBarFavBusca />
+                <div className='container-fav'>
+                    <h1 className='Titulo'>Jogos Favoritos</h1>
                     {games.length > 0 ? (
                         <ul>
                             {/* Adicionando o botão para deletar o jogo */}
                             {games.map((game) => (
                                 <li className="jogos_list" key={game.id}>
                                     {game.title}
-                                    <button className='botao_delete' onClick={() => deleteGame(game.id)}>Delete</button>
+                                    <button className='btn btn-outline-dark' onClick={() => deleteGame(game.id)}>Delete</button>
                                 </li>
                             ))}
                         </ul>
                     ) : (
-                        <p>Ainda não há jogos favoritos</p>
+                        <p className='paragraf'>Ainda não há jogos favoritos</p>
                     )}
                 </div>
-            </main>
         </>
     );
 };

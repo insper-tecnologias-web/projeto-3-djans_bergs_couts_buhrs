@@ -2,13 +2,12 @@
 .corpo {
   font-family: 'Jura', sans-serif;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: 100vh;
   background-color: lightcyan;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .sub-corpo {
@@ -46,16 +45,16 @@
 
 .texto2 {
   font-size: 150%; /* Torna o tamanho do texto responsivo */
-  margin-top: 4vh; /* Ajusta a margem superior */
+  margin-top: 5%; /* Ajusta a margem superior */
   font-weight: 600;
-  margin-bottom: 5%; /* Ajusta a margem inferior */
+  margin-bottom: 2.5%; /* Ajusta a margem inferior */
   text-align: center;
 }
 
 #lupa {
   width: 100%; /* Ajusta o tamanho da lupa para ser responsivo */
   height: 15%;
-  margin-top: -20%; /* Ajusta a margem superior */
+  margin-top: -30%; /* Ajusta a margem superior */
 }
 
 .error {

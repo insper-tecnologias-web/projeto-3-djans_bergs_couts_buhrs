@@ -1,42 +1,44 @@
-.edit-user-info {
-    max-width: 400px;
-    margin: 0 auto;
-    margin-top: 5rem;
+/* Estilos base */
+.change-container {
+  width: 40%;
+  margin: 10% auto;
+  padding: 2%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: 'Jura', sans-serif;
+}
+
+.info-label {
+  font-size: 150%;
+  margin-bottom: 7%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.btn-salvar{
+  margin-right: 2%;
+}
+
+.btn-deletar{
+  margin-left: 2%;
+}
+
+.btn-salvar,
+.btn-deletar{
+  margin-top: 2%;
+}
+
+/* Mídia queries para ajustar o layout em tamanhos de tela menores */
+@media screen and (max-width: 768px) {
+  .signup-container {
+      max-width: 50%; /* Reduzir a largura máxima do contêiner para 50% da largura da tela */
+      margin: 20% auto; /* Ajustar a margem superior e inferior para 20% da tela */
+      padding: 5%; /* Aumentar o preenchimento do contêiner */
   }
-  
-  .edit-user-info h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .edit-user-info label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .edit-user-info input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .button_save_user {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .edit-user-info button:hover {
-    background-color: #0056b3;
-  }
-  .button_delete_user{
-    padding: 10px 20px;
-    background-color: #ff0000;
-    margin-top: 1rem;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
+}
