@@ -1,6 +1,6 @@
 /* Estilos base */
 .signup-container {
-  max-width: 25%;
+  width: 40%;
   margin: 10% auto;
   padding: 2%;
   border: 1px solid #ccc;
@@ -13,7 +13,7 @@
 .cadastro-label {
   margin-bottom: 7%;
   font-weight: bold;
-  font-size: larger;
+  font-size: 150%;
 }
 
 .error {

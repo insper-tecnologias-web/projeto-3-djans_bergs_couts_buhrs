@@ -1,6 +1,6 @@
 /* Estilos base */
 .login-container {
-  max-width: 25%;
+  width: 30%;
   margin: 10% auto;
   padding: 2%;
   border: 1px solid #ccc;
@@ -21,7 +21,7 @@ p {
 .login-label{
   margin-bottom: 7%;
   font-weight: bold;
-  font-size: larger;
+  font-size: 150%;
 }
 
 /* Mídia queries para ajustar o layout em tamanhos de tela menores */
