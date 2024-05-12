@@ -5,8 +5,8 @@ import AppBarFavBusca from "../AppBarFAvBusca/index.jsx";
 import { useNavigate } from 'react-router-dom';
 
 const EditUserInfo = () => {
-  const[isSaved, setIsSaved] = useState(false);
-  const[isDeleted, setIsDeleted] = useState(false);  
+  const [isSaved, setIsSaved] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false);  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -74,8 +74,8 @@ const EditUserInfo = () => {
     <div class="mb-3">
           <h2 className='info-label'>Informações do Usuário</h2>
             <label for="username" class="form-label">Nome de Usuário</label>
-            <input type="username" class="form-control" id="username" value={name}
-                        onChange={(e) => setUsername(e.target.value)}/>
+            <input type="text" class="form-control" id="username" value={name}
+                        onChange={(e) => setName(e.target.value)}/>
       </div>
       <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
