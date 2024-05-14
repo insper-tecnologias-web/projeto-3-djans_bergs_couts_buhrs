@@ -13,8 +13,9 @@ export default function AppBar() {
                 </div>
                 <div className="icones">
                     <Link to="/favoritos"><img src="fav.png" className="fav" alt="Favoritos" ></img></Link>
+                    <Link to="/edita"><img src="usuario.png" className="edita_usuario2" alt="usuario" ></img></Link>
                     <Link to="/principal"><img src="inicio.png" className="inicio" alt="Favoritos" ></img></Link>
-                    <Link to="/edita"><img src="usuario.png" className="edita_usuario" alt="usuario" ></img></Link>
+                    
                 </div>
             </div>
             

@@ -11,6 +11,7 @@ export default function AppBar() {
                     <img src="logo.png" alt="Logo" className="logo"/>
                     <span className="subtitle">Meu Game Favorito</span>
                 </div>
+                
             </div>
         </nav>
     );
