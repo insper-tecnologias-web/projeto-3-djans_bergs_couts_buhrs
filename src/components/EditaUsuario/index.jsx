@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 import axios from 'axios';
-import AppBarFavBusca from "../AppBarFAvBusca/index.jsx";
+import AppBarEdita from "../AppBarEdita";
 import { useNavigate } from 'react-router-dom';
 
 const EditUserInfo = () => {
@@ -69,7 +69,7 @@ const EditUserInfo = () => {
   return (
   
     <>
-    <AppBarFavBusca/>
+    <AppBarEdita/>
     <div className="change-container">
     <div class="mb-3">
           <h2 className='info-label'>Informações do Usuário</h2>

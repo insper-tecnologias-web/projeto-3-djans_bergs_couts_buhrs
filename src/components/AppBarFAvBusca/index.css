@@ -25,7 +25,7 @@
 }
 
 .fav,
-.edita_usuario,
+.edita_usuario2,
 .inicio{
     width: 30px;
     height: 30px;
@@ -33,7 +33,7 @@
 }
 
 .fav,
-.inicio{
+.edita_usuario2{
     margin-right: 10%;
 }
 
@@ -45,7 +45,7 @@
 /* Ajusta os ícones para telas menores */
 @media screen and (max-width: 768px) {
     .fav,
-    .edita_usuario {
+    .edita_usuario2 {
         width: 20px;
         height: 20px;
     }

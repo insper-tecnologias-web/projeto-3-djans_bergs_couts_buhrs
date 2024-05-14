@@ -26,23 +26,20 @@
 
 .fav,
 .edita_usuario,
-.sair {
+.inicio{
     width: 30px;
     height: 30px;
+    
 }
 
-.fav{
-    margin-right: 1%;
+.fav,
+.inicio{
+    margin-right: 10%;
 }
 
-
-.icons {
+.icones {
     
     margin-right: 1rem;
-}
-
-.sair{
-    margin-left: 1rem;
 }
 
 /* Ajusta os ícones para telas menores */
