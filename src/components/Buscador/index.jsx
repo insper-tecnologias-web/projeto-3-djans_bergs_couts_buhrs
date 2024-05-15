@@ -2,16 +2,20 @@ import "./index.css";
 import axios from "axios";
 import { useState } from "react";
 import AppBarFavBusca from '../AppBarFAvBusca';
+import PopUp from "../PopUp";
 
 export default function CorpoTelaUm(props) {
     // Estado para armazenar os jogos
     const [jogos, setJogos] = useState([]);
     // Estado para controlar a visibilidade da lista de jogos
     const [mostrarLista, setMostrarLista] = useState(false);
+    // Estado para controlar o popup
+    const [popup, setPopup] = useState(0);
+    const [popupText, setPopupText] = useState("");
 
     const config = {
         headers: {
-          Authorization: `token ${localStorage.getItem("token")}`,
+            Authorization: `token ${localStorage.getItem("token")}`,
         },
     };
 
@@ -42,16 +46,22 @@ export default function CorpoTelaUm(props) {
         };
 
         try {
-            await axios.post("http://127.0.0.1:8000/api/games/",data, config);
-            alert("Jogo adicionado aos favoritos!");
+            await axios.post("http://127.0.0.1:8000/api/games/", data, config);
+            setPopupText("Jogo adicionado aos favoritos!");
+            setPopup(1);
         } catch (error) {
-            if (error.response.status === 409) {
-                alert("Jogo já adicionado aos favoritos!");
+            if (error.response && error.response.status === 409) {
+                setPopupText("Jogo já adicionado aos favoritos!");
+                setPopup(1);
                 return;
             }
             console.error('Houve um erro!', error);
         }
     }
+  const closePopup = () => {
+        setPopup(0);
+        setPopupText("");
+    };
 
     if (mostrarLista) {
         return (
@@ -79,6 +89,7 @@ export default function CorpoTelaUm(props) {
                         ))}
                     </div>
                 </div>
+            {popup === 1 && <PopUp text={popupText} onClose={closePopup} />}
             </>
         );
     }
