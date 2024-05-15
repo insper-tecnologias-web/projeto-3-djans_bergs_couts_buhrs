@@ -56,7 +56,7 @@ export default function CorpoTelaUm(props) {
         data.title = gameData.name;
 
         await axios
-            .post("https://backend-projeto3-pdd1.onrender.com/api/games/", data, config)
+            .post("https://backend-projeto3-8rpb.onrender.com/api/games/", data, config)
             .then((response) => {
                 setPopupText("Jogo adicionado aos favoritos!");
                 setPopup(1);

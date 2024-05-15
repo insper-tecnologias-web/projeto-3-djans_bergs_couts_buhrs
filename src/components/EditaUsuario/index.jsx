@@ -20,7 +20,7 @@ const EditUserInfo = () => {
   useEffect(() => {
     async function getUserInfo() {
       try {
-        const response = await axios.get('https://backend-projeto3-pdd1.onrender.com/api/infos/', config);
+        const response = await axios.get('https://backend-projeto3-8rpb.onrender.com/api/infos/', config);
         setName(response.data.username);
         setEmail(response.data.email);
         
@@ -36,7 +36,7 @@ const EditUserInfo = () => {
     setIsSaved(true);
    
 
-    await axios.post('hhttps://backend-projeto3-pdd1.onrender.com/api/infos/', {"username":name,"password":password,"email":email},config)
+    await axios.post('https://backend-projeto3-8rpb.onrender.com/api/infos/', {"username":name,"password":password,"email":email},config)
       .then(response => {
         console.log('Atualização realizada com sucesso:', response.data);
       })
@@ -49,7 +49,7 @@ const EditUserInfo = () => {
   async function handleDelete() {
 
     setIsDeleted(true);
-    await axios.delete('https://backend-projeto3-pdd1.onrender.com/api/infos/', config)
+    await axios.delete('https://backend-projeto3-8rpb.onrender.com/api/infos/', config)
       .then(response => {
         console.log('Atualização realizada com sucesso:', response.data);
       })
