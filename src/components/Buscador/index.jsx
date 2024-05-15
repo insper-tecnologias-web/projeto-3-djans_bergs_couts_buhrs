@@ -46,7 +46,7 @@ export default function CorpoTelaUm(props) {
         };
 
         try {
-            await axios.post("http://127.0.0.1:8000/api/games/", data, config);
+            await axios.post("https://backend-projeto3-pdd1.onrender.com/api/games/", data, config);
             setPopupText("Jogo adicionado aos favoritos!");
             setPopup(1);
         } catch (error) {
@@ -58,10 +58,10 @@ export default function CorpoTelaUm(props) {
             console.error('Houve um erro!', error);
         }
     }
-  const closePopup = () => {
-        setPopup(0);
-        setPopupText("");
-    };
+    const closePopup = () => {
+            setPopup(0);
+            setPopupText("");
+        };
 
     if (mostrarLista) {
         return (

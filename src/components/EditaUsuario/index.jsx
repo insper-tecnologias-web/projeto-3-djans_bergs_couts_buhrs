@@ -49,7 +49,7 @@ const EditUserInfo = () => {
   const handleDelete = () => {
 
     setIsDeleted(true);
-    axios.delete('http://127.0.0.1:8000/api/infos/', config)
+    axios.delete('https://backend-projeto3-pdd1.onrender.com/api/infos/', config)
       .then(response => {
         console.log('Atualização realizada com sucesso:', response.data);
       })

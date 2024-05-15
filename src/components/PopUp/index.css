@@ -15,6 +15,11 @@
     padding: 20px; /* Espaçamento interno para evitar que o conteúdo encoste nas bordas da tela */
     box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
 }
+.popup h1 {
+    font-family: 'Jura', sans-serif; /* Adicionando a mesma fonte utilizada no navbar */
+    font-size: 200%; /* Tamanho da fonte */
+
+}
 
 /* Estilos para o conteúdo interno do popup */
 .popup-inner {

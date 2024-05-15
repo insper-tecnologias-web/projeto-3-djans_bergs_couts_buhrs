@@ -14,7 +14,7 @@ const JogosFav = () => {
     // Pegando os jogos favoritos da base de dados
     const [games, setGames] = useState([]);
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/api/games/",config)
+        axios.get("https://backend-projeto3-pdd1.onrender.com/api/games/",config)
             .then((response) => setGames(response.data))
             .catch((error) => console.error('Error fetching games:', error));
     }, []);
