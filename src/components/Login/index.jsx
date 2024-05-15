@@ -14,7 +14,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   async function get_token(username, password){
-    await axios.post('http://127.0.0.1:8000/api/token/',{username, password})
+    await axios.post('https://backend-projeto3-8rpb.onrender.com/api/token/',{username, password})
     .then((response) => {
       const token = response.data.token;
       localStorage.setItem('token', token);
@@ -30,7 +30,7 @@ const Login = () => {
     setError('');
 
     //Envio para o backend o usuario e senha para verificação
-     await axios.post(' https://backend-projeto3-pdd1.onrender.com/api/users/', { username, password })
+     await axios.post(' https://backend-projeto3-8rpb.onrender.com/api/users/', { username, password })
         .then(response => {
             // handle successful login
             get_token(username, password);
