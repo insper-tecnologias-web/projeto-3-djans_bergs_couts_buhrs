@@ -9,6 +9,7 @@ import CorpoTelaUm from './components/CorpoTelaUm/index.jsx';
 import Cadastro from './components/Cadastro/index.jsx';
 import EditaUsuario from './components/EditaUsuario/index.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PopUp from './components/PopUp/index.jsx';
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
     path: '/edita',
     element: <EditaUsuario />,
   },
+  {
+    path: 'popoup',
+    element: <PopUp />,
+  }
   
 ]);
 
