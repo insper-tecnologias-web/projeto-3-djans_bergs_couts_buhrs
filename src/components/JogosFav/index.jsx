@@ -38,10 +38,12 @@ const JogosFav = () => {
                         <ul>
                             {/* Adicionando o botão para deletar o jogo */}
                             {games.map((game) => (
-                                <li className="jogos_list" key={game.id}>
-                                    {game.title}
-                                    <button className='btn btn-outline-dark' onClick={() => deleteGame(game.id)}>Delete</button>
-                                </li>
+                                <div className='jogos'>
+                                    <li className="jogos_list" key={game.id}>
+                                        {game.title}
+                                        <button className='btn-delete btn btn-outline-danger' onClick={() => deleteGame(game.id)}>Delete</button>
+                                    </li>
+                                </div>
                             ))}
                         </ul>
                     ) : (
