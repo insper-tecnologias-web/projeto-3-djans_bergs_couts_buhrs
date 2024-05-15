@@ -13,12 +13,12 @@ const Signup = () => {
   const [isCadstar, setIsCadastrar] = useState(false);
   const navigate = useNavigate();
 
-  const handleSignup = () => {
+  async function handleSignup (){
     // Limpa o estado de erro
     setError('');
 
     // Envio para o backend os dados do usuário para cadastro
-    axios.post('https://backend-projeto3-pdd1.onrender.com/api/users/', { username, password, email })
+    await axios.post('https://backend-projeto3-pdd1.onrender.com/api/users/', { username, password, email })
       .then(response => {
         // handle successful signup
         setIsCadastrar(true); // Define o estado de cadastro como verdadeiro
