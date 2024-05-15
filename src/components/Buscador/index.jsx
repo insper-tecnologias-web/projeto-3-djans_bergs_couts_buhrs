@@ -13,15 +13,15 @@ export default function CorpoTelaUm(props) {
         headers: {
           Authorization: `token ${localStorage.getItem("token")}`,
         },
-      };
+    };
 
     // Função para pegar os jogos da API e atualizar o estado
     async function getGames() {
         try {
             let games = [];
             let i = Math.floor(Math.random() * 11);
-            let j = i
-            while (i <j + 10) {
+            let j = i;
+            while (i < j + 10) {
                 const url = `https://api.rawg.io/api/games?key=64e9b22860784b7083f6dcab592047df&page=${i}`;
                 const response = await axios.get(url);
                 const data = response.data;
@@ -52,29 +52,35 @@ export default function CorpoTelaUm(props) {
             console.error('Houve um erro!', error);
         }
     }
-    if (mostrarLista){
-        return(
+
+    if (mostrarLista) {
+        return (
             <>
-            <AppBarFavBusca />
-            <div className="lista-jogos">
-                    {jogos.map(jogo => (
-                        <div key={jogo.id} className="jogo">
-                            <h3>{jogo.name}</h3>
-                            <img 
-                                src={jogo.background_image} 
-                                alt={jogo.name} 
-                                className="jogoimg" 
-                                onClick={() => salvarJogo(jogo)} // Chama a função salvarJogo ao clicar na imagem
-                                style={{ cursor: 'pointer' }} // Define o cursor como ponteiro para indicar que é clicável
-                            />
-                        </div>
-                    ))}
+                <AppBarFavBusca />
+                <div className="container lista-jogos">
+                    <div className="row">
+                        {jogos.map(jogo => (
+                            <div key={jogo.id} className="col-md-3 col-sm-6 mb-4">
+                                <div className="jogo card h-100">
+                                    <div className="d-flex justify-content-center align-items-center card-img-container">
+                                        <img 
+                                            src={jogo.background_image} 
+                                            alt={jogo.name} 
+                                            className="card-img-top jogoimg" 
+                                            onClick={() => salvarJogo(jogo)} // Chama a função salvarJogo ao clicar na imagem
+                                            style={{ cursor: 'pointer' }} // Define o cursor como ponteiro para indicar que é clicável
+                                        />
+                                    </div>
+                                    <div className="card-body d-flex flex-column justify-content-end">
+                                        <h5 className="card-title text-center">{jogo.name}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </>
-
-            
-        )
-
+        );
     }
 
     return (
@@ -83,13 +89,9 @@ export default function CorpoTelaUm(props) {
         <div className="corpo_busca">
             <div className="titulo-btn">
                 <p className="titulo_busca">Clique e descubra novos jogos!</p>
-                <button className="btn-edit-2 btn btn-outline-dark " onClick={getGames}>Mostrar jogos</button>
+                <button className="btn-edit-2 btn btn-outline-dark" onClick={getGames}>Mostrar jogos</button>
             </div>
         </div>
-            
-            
-        
-
        </>
     );
 }
