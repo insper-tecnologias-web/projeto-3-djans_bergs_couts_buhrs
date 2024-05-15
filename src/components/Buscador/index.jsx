@@ -58,39 +58,51 @@ export default function CorpoTelaUm(props) {
             console.error('Houve um erro!', error);
         }
     }
-
-    const closePopup = () => {
+  const closePopup = () => {
         setPopup(0);
         setPopupText("");
     };
 
-    return (
-        <>
-            <AppBarFavBusca />
-            <div className="corpo_busca">
-                {mostrarLista ? (
-                    <div className="lista-jogos">
+    if (mostrarLista) {
+        return (
+            <>
+                <AppBarFavBusca />
+                <div className="container lista-jogos">
+                    <div className="row">
                         {jogos.map(jogo => (
-                            <div key={jogo.id} className="jogo">
-                                <h3>{jogo.name}</h3>
-                                <img
-                                    src={jogo.background_image}
-                                    alt={jogo.name}
-                                    className="jogoimg"
-                                    onClick={() => salvarJogo(jogo)} // Chama a função salvarJogo ao clicar na imagem
-                                    style={{ cursor: 'pointer' }} // Define o cursor como ponteiro para indicar que é clicável
-                                />
+                            <div key={jogo.id} className="col-md-3 col-sm-6 mb-4">
+                                <div className="jogo card h-100">
+                                    <div className="d-flex justify-content-center align-items-center card-img-container">
+                                        <img 
+                                            src={jogo.background_image} 
+                                            alt={jogo.name} 
+                                            className="card-img-top jogoimg" 
+                                            onClick={() => salvarJogo(jogo)} // Chama a função salvarJogo ao clicar na imagem
+                                            style={{ cursor: 'pointer' }} // Define o cursor como ponteiro para indicar que é clicável
+                                        />
+                                    </div>
+                                    <div className="card-body d-flex flex-column justify-content-end">
+                                        <h5 className="card-title text-center">{jogo.name}</h5>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>
-                ) : (
-                    <div className="titulo-btn">
-                        <p className="titulo_busca">Clique e descubra novos jogos!</p>
-                        <button className="btn-edit-2 btn btn-outline-dark" onClick={getGames}>Mostrar jogos</button>
-                    </div>
-                )}
-            </div>
+                </div>
             {popup === 1 && <PopUp text={popupText} onClose={closePopup} />}
-        </>
+            </>
+        );
+    }
+
+    return (
+       <>
+         <AppBarFavBusca />
+        <div className="corpo_busca">
+            <div className="titulo-btn">
+                <p className="titulo_busca">Clique e descubra novos jogos!</p>
+                <button className="btn-edit-2 btn btn-outline-dark" onClick={getGames}>Mostrar jogos</button>
+            </div>
+        </div>
+       </>
     );
 }
