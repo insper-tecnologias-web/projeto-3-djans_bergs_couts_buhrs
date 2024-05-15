@@ -25,12 +25,12 @@ const Login = () => {
 
   
 
-  const handleLogin = () => {
+  async function handleLogin(){
     // Limpa o estado de erro
     setError('');
 
     //Envio para o backend o usuario e senha para verificação
-     axios.post(' https://backend-projeto3-pdd1.onrender.com/api/users/', { username, password })
+     await axios.post(' https://backend-projeto3-pdd1.onrender.com/api/users/', { username, password })
         .then(response => {
             // handle successful login
             get_token(username, password);
