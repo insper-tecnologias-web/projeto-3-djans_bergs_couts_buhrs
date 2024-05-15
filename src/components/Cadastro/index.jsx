@@ -18,7 +18,7 @@ const Signup = () => {
     setError('');
 
     // Envio para o backend os dados do usuário para cadastro
-    axios.post('http://127.0.0.1:8000/api/users/', { username, password, email })
+    axios.post('https://backend-projeto3-pdd1.onrender.com/api/users/', { username, password, email })
       .then(response => {
         // handle successful signup
         setIsCadastrar(true); // Define o estado de cadastro como verdadeiro

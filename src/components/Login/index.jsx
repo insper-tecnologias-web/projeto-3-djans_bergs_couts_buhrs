@@ -30,7 +30,7 @@ const Login = () => {
     setError('');
 
     //Envio para o backend o usuario e senha para verificação
-     axios.post(' http://127.0.0.1:8000/api/users/', { username, password })
+     axios.post(' https://backend-projeto3-pdd1.onrender.com/api/users/', { username, password })
         .then(response => {
             // handle successful login
             get_token(username, password);
