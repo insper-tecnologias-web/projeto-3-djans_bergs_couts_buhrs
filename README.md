@@ -1,4 +1,2 @@
-Objetivos para a proxima semana:
-
-1 - Estar com a tela de login pronta e funcionando
-2 - Utilizar funcionalidades do bootstrap
+Link do deploy: https://projeto-3-djans-bergs-couts-buhrs-ivzp.onrender.com/
+Repositorio Backend:  https://github.com/DanielMarcoD/backend-projeto3
