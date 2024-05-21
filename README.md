@@ -36,7 +36,7 @@ Para rodar este projeto localmente, siga os passos abaixo:
    ```bash
    
    #Clonando o repositório
-   git clone https://github.com/insper-tecnologias-web/projeto-3-djans_bergs_couts_buhrs
+   git clone https://github.com/insper-tecnologias-web/projeto-3-djans_bergs_couts_buhrs.git
 
    #Indo até o local do repositório
    cd projeto-3-djans_bergs_couts_buhrs
@@ -58,7 +58,7 @@ Para rodar este projeto localmente, siga os passos abaixo:
    ```bash
    
    #Clonando o repositório
-   git clone https://github.com/DanielMarcoD/backend-projeto3
+   git clone https://github.com/DanielMarcoD/backend-projeto3.git
 
    #Indo até o local do repositório
    cd backend-projeto3
