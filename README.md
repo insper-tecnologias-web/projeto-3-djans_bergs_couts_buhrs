@@ -97,7 +97,6 @@ Crie sua conta na área de cadastro. Faça o login. Comece a favoritar seus jogo
 
 ## Demonstração
 
-Aqui está uma demonstração do projeto em funcionamento:
 [![Demonstração do Projeto](https://img.youtube.com/vi/dt7iEfqMCRo/0.jpg)](https://youtu.be/dt7iEfqMCRo)
 
 ## Diagrama
