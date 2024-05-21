@@ -21,6 +21,8 @@ Este projeto é um site em que o usuário pode criar uma conta, criar uma lista 
 
 - Registro de usuário
 - Login de usuário
+- Favoritar jogos
+- Buscar novos jogos
 - Edição de perfil
 - Deleção de usuário
 - Interface estilizada com Bootstrap
