@@ -2,7 +2,7 @@
 (Repositório Backend:  https://github.com/DanielMarcoD/backend-projeto3)
 # Meu Game Favorito
 
-[![Clique aqui para ser redirecionado ao Website]( https://projeto-3-djans-bergs-couts-buhrs-ivzp.onrender.com/)
+[Clique aqui para ser redirecionado ao Website](https://projeto-3-djans-bergs-couts-buhrs-ivzp.onrender.com/)
 
 ## Índice
 
