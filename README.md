@@ -2,7 +2,7 @@
 (Repositório Backend:  https://github.com/DanielMarcoD/backend-projeto3)
 # Meu Game Favorito
 
-[![Website](https://img.shields.io/badge/website-online-brightgreen)]( https://projeto-3-djans-bergs-couts-buhrs-ivzp.onrender.com/)
+[![Clique aqui para ser redirecionado ao Website]( https://projeto-3-djans-bergs-couts-buhrs-ivzp.onrender.com/)
 
 ## Índice
 
@@ -10,15 +10,12 @@
 - [Funcionalidades](#funcionalidades)
 - [Instalação](#instalação)
 - [Uso](#uso)
-- [Arquitetura](#arquitetura)
 - [Cronograma](#cronograma)
 - [Demonstração](#demonstração)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-
+- [Diagrama](#diagrama)
 ## Descrição
 
-Este projeto é uma aplicação web que permite aos usuários se registrarem, fazerem login e gerenciarem suas informações. Foi desenvolvido como parte de um projeto acadêmico para demonstrar habilidades em desenvolvimento web, integração de front-end e back-end, e design de interface.
+Este projeto é um site em que o usuário pode criar uma conta, criar uma lista de favoritos com seus jogos preferidos, além de descobrir novos jogos com o nosso buscador!
 
 ## Funcionalidades
 
@@ -77,6 +74,32 @@ Para rodar este projeto localmente, siga os passos abaixo:
    python manage.py runserver
    
 4. Agora o projeto está pronto para uso localmente!
+
+## Uso
+
+Crie sua conta na área de cadastro. Faça o login. Comece a favoritar seus jogos já conhecidos ou clique na lupa para buscar novos jogos. 
+
+
+## Cronograma
+
+### Semana 1
+- Implementação do login de usuário
+- Início da integração do front-end com o back-end
+- Jogos favoritos atrelados ao usuário logado
+
+### Semana 2
+- Implementação do Bootstrap para estilização
+- Funcionalidades adicionais: edição e deleção de usuário
+- Melhorias no CSS para todas as páginas
+ 
+
+## Demonstração
+
+Aqui está uma demonstração do projeto em funcionamento:
+[Inserir o link para a demonstração aqui](#)
+
+## Diagrama
+
      
     
 
