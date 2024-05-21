@@ -96,9 +96,11 @@ Crie sua conta na área de cadastro. Faça o login. Comece a favoritar seus jogo
 ## Demonstração
 
 Aqui está uma demonstração do projeto em funcionamento:
-[Inserir o link para a demonstração aqui](#)
+[![Demonstração do Projeto](https://img.youtube.com/vi/dt7iEfqMCRo/0.jpg)](https://youtu.be/dt7iEfqMCRo)
 
 ## Diagrama
+![Diagrama do Projeto](https://github.com/insper-tecnologias-web/projeto-3-djans_bergs_couts_buhrs/raw/main/img-diagrama/Diagrama.jpg)
+
 
      
     
