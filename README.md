@@ -35,13 +35,21 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
    ```bash
+   
+   #Clonando o repositório
    git clone https://github.com/insper-tecnologias-web/projeto-3-djans_bergs_couts_buhrs
 
+   #Indo até o local do repositório
    cd projeto-3-djans_bergs_couts_buhrs
 
+   #Instalando as dependências
    npm install
 
+   #Rodando o site
    npm run dev
+
+   #Clique no link que aparece após rodar o último comando
+   
 
 2. Para rodar localmente:
    Altere os links: https://projeto-3-djans-bergs-couts-buhrs-ivzp.onrender.com/
@@ -49,11 +57,11 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 3. Para funcionar localmente e salvar no banco de dados:
    ```bash
-   #Clonando o repositório
    
+   #Clonando o repositório
    git clone https://github.com/DanielMarcoD/backend-projeto3
 
-   #Indo para o repositório
+   #Indo até o local do repositório
    cd backend-projeto3
 
    #Criando o ambiente virtual
