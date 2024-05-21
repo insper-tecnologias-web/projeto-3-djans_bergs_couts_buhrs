@@ -49,16 +49,23 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 3. Para funcionar localmente e salvar no banco de dados:
    ```bash
+   #Clonando o repositório
+   
    git clone https://github.com/DanielMarcoD/backend-projeto3
 
+   #Indo para o repositório
    cd backend-projeto3
 
-   python -m venv venv
+   #Criando o ambiente virtual
+   python -m venv env
 
-   venv\Scripts\activate
+   #Ativando o Amiente virtual
+   env\Scripts\activate.bat
 
+   #Instalando as dependências
    pip install -r requirements.txt
 
+   #Rodando o servidor backend
    python manage.py runserver
    
 4. Agora o projeto está pronto para uso localmente!
